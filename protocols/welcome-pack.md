@@ -72,10 +72,11 @@ All going-live copy runs through the humanizer gate, no exceptions:
 - **Kill abstract rule-of-three runs** (vision/value/voice). Concrete triads
   are fine.
 - **Read it aloud.** If it sounds like a brochure, rewrite it.
-- Know the register: BMVC = Sandra's voice (warm, practical, neighbor, no
-  jargon). Aetherforce = precise, sourced, no hype. Same standard applies to
-  schema answer text — Google reads it.
-- Full SOP: BMVC copy SOP (system prompt), humanizer skill.
+- Know the register per client: a local service business reads like a neighbor
+  (warm, practical, no jargon); a research or archive property reads precise,
+  sourced, no hype. Same standard applies to schema answer text — Google reads
+  it.
+- Full SOP: the client copy SOP (system prompt) + the humanizer skill.
 
 ## 4. Fleet mechanics in one page
 
@@ -108,16 +109,11 @@ Never self-review. Two reviewer lenses: identity + voice.
 virtually everything. letta/auto quota = managed. BYOK = reserve for
 top-tier ops only (Surge walks, master briefings, debates, red-team).
 
-## 5. Projects — where things sit (as of 2026-09-17)
+## 5. Projects — where things sit
 
-| Project | Status |
-|---|---|
-| **Stayfound Optimized** (agency) | AI-authority/SEO agency. Flagship client BMVC. Full detail: BMVC-AGENT-HANDOFF.md |
-| **BMVC** (Sandra's cleaning co) | Canonical name **Bellas Mountain Vacation Cleaning** (no apostrophe, ever). Operator Sandra Rose. 10 service areas (Black Hawk → Evergreen corridor), services incl. Rental Ready Prep, Co-Hosting, Estate Transition. QC system drafted. Sign-offs pending: About Us rewrite, blog assets |
-| **Clean Chem Intel** (BMVC ingredient transparency) | Launch **Oct 15**. 158 ingredients graded / ~133-137 products. CCI-011 = Chris's final gate. 4 duplicate products flagged (Dawn Ultra, Tide, Lysol Multi-Surface, Seventh Gen x2) — cleanup owner pending |
-| **Aetherforce / AFLinks** (Living Library) | Archive ~69.5k entries, sharded index, search_index trimmed (PREVIEW_LEN 160). Report agents: Drunvalo, Connector, Sifter, Navigator, Forge, Cure 8er. Replication program live. ALIASES: Scout = Scooter; Scribe = Tutor? (reconciliation pending) |
-| **Village / permies** | Quest system, 27 guilds translated (es/fr/de complete), 499 categories, monthly quest packs |
-| **Fleet ops** | 20 agents / 20 pods registered, Guild Hall HUD live (focusingpulse.github.io/fleet-hud), hourly self-render cron, XP system, mandate checker, idea graveyard |
+Project status is maintained privately in the coordination repo. Ask whoever
+onboarded you for your project's context.
+
 
 ## 6. Lessons learned — the digest (we paid for these)
 
@@ -146,15 +142,15 @@ top-tier ops only (Surge walks, master briefings, debates, red-team).
    evidence step (two-source + human).
 8. **Datasets must not be built from the fleet's own unexamined output**
    (echo/model collapse). External anchor or it doesn't graduate.
-9. **Windows gotchas:** git hooks need the node shim on PATH
-   (`C:\Users\focus\.letta\bin`); Set-Content mangles UTF-8 (use the memory
+9. **Windows gotchas:** git hooks need the node shim folder on PATH
+   (`$HOME\.letta\bin`); Set-Content mangles UTF-8 (use the memory
    tool); PowerShell `~` doesn't expand; cron prompts: no double quotes,
    one line.
 10. **Deliverables convention:** paste content in chat AND put the file in a
     visible folder — people can't navigate agent memory paths.
-11. **CCI data integrity:** dedupe first, oldest entry wins; verify grades
-    against the actual PubChem/GHS claims (two "live key" errors already
-    caught).
+11. **Client dataset integrity:** dedupe first, oldest entry wins; verify
+    grades against the upstream source claims (two verification errors already
+    caught), never against a downstream copy.
 12. **Debates / cross-model:** run real multi-round debates (fork agents one
     at a time to avoid rate limits); when a colleague paste an LLM summary,
     establish provenance FIRST, then critique.
@@ -184,7 +180,7 @@ top-tier ops only (Surge walks, master briefings, debates, red-team).
 | HUD-SPEC.md | The heads-up display spec |
 | PUSH-SHIM.md | The exact credential-shim push pattern |
 | IDEA-GRAVEYARD.md | What we already rejected, and why |
-| BMVC-AGENT-HANDOFF.md | BMVC client context (voice, scope, pending items) |
+| A per-client agent handoff file | Client context (voice, scope, pending items) |
 
 Welcome aboard. Mark the trail better than you found it.
 
