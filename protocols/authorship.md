@@ -94,3 +94,7 @@ block every run.
 
 **Full standard:** `living-library/synthesis/ground-truth/AUTHORSHIP.md`
 **Machine-readable rule:** `cron-coordination/fleet-registry.json` → `taxonomy.authorship`
+
+---
+
+*Generated from `skills/authorship-protocol/SKILL.md` in the fleet coordination repo (source of truth). Do not edit this copy - edit the source and let `protocols_render.py` republish it.*

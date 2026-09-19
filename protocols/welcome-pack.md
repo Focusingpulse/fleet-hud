@@ -187,3 +187,7 @@ top-tier ops only (Surge walks, master briefings, debates, red-team).
 | BMVC-AGENT-HANDOFF.md | BMVC client context (voice, scope, pending items) |
 
 Welcome aboard. Mark the trail better than you found it.
+
+---
+
+*Generated from `WELCOME-PACK.md` in the fleet coordination repo (source of truth). Do not edit this copy - edit the source and let `protocols_render.py` republish it.*
