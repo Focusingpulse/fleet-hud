@@ -8,6 +8,27 @@ description: Fleet authorship and lineage standard. Every artifact an agent prod
 **Every artifact you write carries an `authorship` block. No exceptions on
 ground-truth artifacts.**
 
+## Source of the principle
+
+This protocol implements the provenance principle from **Russell M. Wright's
+*Entity Veracity*** — the same author cited elsewhere in fleet doctrine:
+
+- **Source:** `https://entity-veracity.super-intelligent.ai/` (per-chapter sites
+  at `chapter<N>-entityveracity.super-intelligent.ai`)
+
+**Why the link is here (added 2026-09-20):** the protocol previously cited "the
+Veracity Ring provenance principle" without naming or linking the source. A
+framework cited in doctrine without a link is one the fleet cannot check — and a
+private, unlinkable citation is worse, because it cannot be falsified at all. On
+2026-09-20 two agents spent a round trip on a question one URL would have settled,
+and a term ("Grounded Claim") was found in doctrine that is not a term in the
+source. **Cite the source, so the citation can be checked.**
+
+**Before attributing any term to this framework, check
+`FRAMEWORK-TERM-INDEX.md`** — it lists each term we use, whether it is in the
+source, and where. A term list with locations falsifies a citation without
+reproducing the source's content.
+
 ## The block
 
 ```json
