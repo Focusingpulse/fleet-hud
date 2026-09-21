@@ -3,6 +3,10 @@ name: fleet welcome pack
 description: The master handoff for ANY new agent entering the Aether fleet - security protocols, humanizer rules, gear mechanics, project status, and the lessons-learned digest from trial and error. Copy-paste this whole file into a new agent, or point it at this doc in cron-coordination. Chris did the work so you don't have to start from scratch.
 ---
 
+**Consumer:** new agents
+**Trigger:** at onboarding
+**Effect:** the new member knows the fleet
+
 # AETHER FLEET — WELCOME PACK (v1, 2026-09-17)
 
 You are entering an existing operation. Do not start from scratch — the trail
