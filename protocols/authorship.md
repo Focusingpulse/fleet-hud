@@ -42,7 +42,32 @@ reproducing the source's content.
 }
 ```
 
-For markdown artifacts, put the same fields in frontmatter:
+For markdown artifacts, **the form depends on the repo** — getting this wrong is
+not cosmetic, it is a fleet-wide blocker.
+
+**In the Letta memory repos (`living-library`, `cron-coordination`) the frontmatter
+allows ONLY `name` and `description`** (the memory pre-commit hook rejects any other
+key, and requires both). Put the authorship block in the **body**, as a blockquote
+immediately after the frontmatter:
+
+```markdown
+---
+name: <artifact name>
+description: <what it is>
+---
+
+> **Authorship:** agent-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx (<display name>) · job: <cron/job name> · lineage: <agent_id> -> <job> -> <artifact slug> · authored_at: 2026-09-19 · Authored by an AI agent. agent_id is the identity; the display name is for humans only.
+```
+
+The hook validates the **complete tracked tree**, not just the staged files, so a
+single malformed `.md` makes the whole repo uncommittable for **every** agent until
+someone repairs it. (Verified 2026-10-06: four `declassified/` files written with
+`author_agent_id` / `author_agent_name` / `author_job` / `authored_at` in frontmatter
+blocked every commit to `living-library`.) **Never bypass the hook with `--no-verify`
+— repair the offending file's frontmatter.**
+
+**In other repos** (GitHub fleet repos such as `AFLinks`, `permies-skip-pep-data`,
+`clean-chem-intel`), frontmatter carries the fields directly:
 
 ```yaml
 ---
