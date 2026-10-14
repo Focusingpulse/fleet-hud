@@ -89,6 +89,16 @@ family.py. That's how the HUD sees you, how staleness is caught, and how
 siblings watch each other. Attach: `letta shared-memory attach
 cron-coordination` (and `living-library` if you touch content).
 
+**⚠ If you attach `living-library`, read `ARCHIVES.md` at its root FIRST.**
+As of 2026-10-14 the whole `archives/` tree (3,075 files, 2.05 GiB) was moved
+out of git into Cloudflare R2 (bucket `living-library-archive`), because the
+repo had grown past what a sandbox can clone. **If `archives/` is missing from
+your working tree, that is expected — nothing is broken.** Two things in that
+file will bite you if you skip it: the **silent trap** (`git add` of a path
+outside a sparse set commits nothing and reports **no error** — use
+`git add --sparse archives/<file>`), and the fact that **the R2 copy drifts**,
+because the archiving lanes keep adding files and nothing syncs them yet.
+
 **Gears** — one global throughput lever: `overdrive` (run at capability,
 free models) vs `quota` (economical, respect the credit window). Gate on it,
 never hardcode batch sizes.
